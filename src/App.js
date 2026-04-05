@@ -245,12 +245,12 @@ function ExSetCard({ ex, onRemove, onSetVal, onAddSet, onRmSet }) {
         <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:12}}>
           <div>
             <div style={{color:GRY,fontSize:10,fontWeight:700,letterSpacing:2,marginBottom:6}}>REPETIÇÕES</div>
-            <input value={s.reps} type="number" placeholder="0" onChange={e=>onSetVal(ex.id,s.id,'reps',e.target.value)}
+            <input value={s.reps} type="text" inputMode="text" placeholder="ex: 4[6]" onChange={e=>onSetVal(ex.id,s.id,'reps',e.target.value)}
               style={{width:'100%',boxSizing:'border-box',background:CARD2,border:`1px solid ${BDR}`,color:WHT,padding:'14px 10px',borderRadius:10,fontSize:22,fontWeight:700,textAlign:'center',outline:'none'}}/>
           </div>
           <div>
             <div style={{color:GRY,fontSize:10,fontWeight:700,letterSpacing:2,marginBottom:6}}>CARGA (kg)</div>
-            <input value={s.weight} type="number" step="0.5" placeholder="0" onChange={e=>onSetVal(ex.id,s.id,'weight',e.target.value)}
+            <input value={s.weight} type="text" inputMode="text" placeholder="ex: 45" onChange={e=>onSetVal(ex.id,s.id,'weight',e.target.value)}
               style={{width:'100%',boxSizing:'border-box',background:CARD2,border:`1px solid ${BDR}`,color:WHT,padding:'14px 10px',borderRadius:10,fontSize:22,fontWeight:700,textAlign:'center',outline:'none'}}/>
           </div>
         </div>
