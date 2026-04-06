@@ -1,62 +1,6 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-    <meta name="theme-color" content="#07090E" />
-    <meta name="description" content="Wolf Sirius Training Workout" />
-    <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="apple-mobile-web-app-title" content="Wolf Sirius" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <title>Wolf Sirius Training Workout</title>
-    <script>
-      // Gera ícone SVG como PNG e injeta no manifest/link
-      window.addEventListener('load', () => {
-        const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 110" width="512" height="512">
-          <rect width="100" height="110" fill="#07090E"/>
-          <path d="M50,4 L94,20 L94,58 Q94,90 50,108 Q6,90 6,58 L6,20 Z" fill="white"/>
-          <path d="M50,12 L86,26 L86,58 Q86,84 50,100 Q14,84 14,58 L14,26 Z" fill="#07090E"/>
-          <polygon points="27,40 34,18 44,36" fill="white"/>
-          <polygon points="73,40 66,18 56,36" fill="white"/>
-          <polygon points="30,37 35,22 41,35" fill="#07090E"/>
-          <polygon points="70,37 65,22 59,35" fill="#07090E"/>
-          <path d="M27,40 Q22,54 25,66 Q34,80 50,81 Q66,80 75,66 Q78,54 73,40 Q62,30 50,29 Q38,30 27,40Z" fill="white"/>
-          <ellipse cx="39" cy="50" rx="7" ry="6" fill="#07090E"/>
-          <ellipse cx="61" cy="50" rx="7" ry="6" fill="#07090E"/>
-          <path d="M28,44 L37,40" stroke="#07090E" stroke-width="2.5" stroke-linecap="round"/>
-          <path d="M72,44 L63,40" stroke="#07090E" stroke-width="2.5" stroke-linecap="round"/>
-          <path d="M42,64 Q50,60 58,64 L56,72 Q50,75 44,72Z" fill="#07090E"/>
-          <path d="M50,75 Q43,81 39,78" fill="none" stroke="#07090E" stroke-width="2" stroke-linecap="round"/>
-          <path d="M50,75 Q57,81 61,78" fill="none" stroke="#07090E" stroke-width="2" stroke-linecap="round"/>
-          <polygon points="44,32 50,24 56,32 50,40" fill="#07090E" opacity="0.45"/>
-        </svg>`;
-        const blob = new Blob([svg], {type: 'image/svg+xml'});
-        const url = URL.createObjectURL(blob);
-        // Apple touch icon
-        const apple = document.createElement('link');
-        apple.rel = 'apple-touch-icon';
-        apple.href = url;
-        document.head.appendChild(apple);
-        // Favicon
-        const favicon = document.createElement('link');
-        favicon.rel = 'icon';
-        favicon.type = 'image/svg+xml';
-        favicon.href = url;
-        document.head.appendChild(favicon);
-      });
-    </script>
-    <style>
-      * { margin: 0; padding: 0; box-sizing: border-box; }
-      body { background: #07090E; font-family: system-ui, sans-serif; }
-      input, button, textarea, select {
-        -webkit-tap-highlight-color: transparent;
-        font-family: inherit;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
-</html>
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
